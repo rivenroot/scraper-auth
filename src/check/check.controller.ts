@@ -17,7 +17,7 @@ export class CheckController {
       uid: '49e40a3448fa0c00',
     },
     {
-      uid: '5elec55108b91ca9',
+      uid: '5e1ec55108b91ca9',
       name: 'Ljupce',
     },
   ];
