@@ -5,12 +5,37 @@ import * as fs from 'fs';
 
 @Controller('app')
 export class ApkController {
+  latest = {
+    latest: '1.0.1',
+    apkUrl: 'https://scraper.polysoft.rs/app/install/scraper-1.0.1.apk',
+  };
+
   @Get('version')
   getVersion() {
-    return {
-      latest: '1.0.1',
-      apkUrl: 'https://scraper.polysoft.rs/app/install/scraper-1.0.1.apk',
-    };
+    return this.latest;
+  }
+
+  @Get('latest')
+  getLatest(@Res() res: Response) {
+    const apkPath = path.join(
+      __dirname,
+      '..',
+      '..',
+      'public',
+      `scraper-${this.latest.latest}.apk`,
+    );
+
+    if (!fs.existsSync(apkPath)) {
+      throw new NotFoundException('APK not found');
+    }
+
+    res.setHeader('Content-Type', 'application/vnd.android.package-archive');
+    res.setHeader(
+      'Content-Disposition',
+      `attachment; filename="scraper-${this.latest.latest}.apk"`,
+    );
+
+    return res.sendFile(apkPath);
   }
 
   @Get('install/:name')
