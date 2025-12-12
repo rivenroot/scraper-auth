@@ -4,7 +4,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 
 @Controller('app')
-export class AppController {
+export class ApkController {
   @Get('version')
   getVersion() {
     return {
