@@ -13,6 +13,10 @@ export class CheckController {
       uid: '197e03a57bd685b5',
     },
     {
+      name: 'Nikola Dev',
+      uid: '005801b54a69aefa',
+    },
+    {
       name: 'Aca Test',
       uid: '49e40a3448fa0c00',
     },
