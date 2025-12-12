@@ -9,7 +9,7 @@ export class ApkController {
   getVersion() {
     return {
       latest: '1.0.1',
-      apkUrl: 'https://scraper.polysoft.rs/scraper-1.0.1.apk',
+      apkUrl: 'https://scraper.polysoft.rs/app/install/scraper-1.0.1.apk',
     };
   }
 
