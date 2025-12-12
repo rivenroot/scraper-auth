@@ -16,7 +16,6 @@ export class ApkController {
   @Get('install/:name')
   getApk(@Param('name') name: string, @Res() res: Response) {
     const apkPath = path.join(__dirname, '..', '..', 'public', name);
-    console.log(apkPath);
 
     if (!fs.existsSync(apkPath)) {
       throw new NotFoundException('APK not found');
