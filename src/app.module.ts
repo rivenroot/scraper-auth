@@ -5,7 +5,7 @@ import { CheckModule } from './check/check.module';
 import { ProxyModule } from './proxy/proxy.module';
 
 @Module({
-  imports: [CheckModule, ProxyModule],
+  imports: [CheckModule, ProxyModule, AppModule],
   controllers: [AppController],
   providers: [AppService],
 })
