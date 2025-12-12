@@ -20,6 +20,10 @@ export class CheckController {
       uid: '5e1ec55108b91ca9',
       name: 'Ljupce',
     },
+    {
+      uid: 'e3dc8ff301119fc2',
+      name: 'Zoki',
+    },
   ];
 
   @Get()
