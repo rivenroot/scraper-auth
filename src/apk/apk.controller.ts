@@ -6,8 +6,8 @@ import * as fs from 'fs';
 @Controller('app')
 export class ApkController {
   latest = {
-    latest: '1.0.1',
-    apkUrl: 'https://scraper.polysoft.rs/app/install/scraper-1.0.1.apk',
+    latest: '1.0.2',
+    apkUrl: 'https://scraper.polysoft.rs/app/install/scraper-1.0.2.apk',
   };
 
   @Get('version')
